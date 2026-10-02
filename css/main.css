@@ -1,21 +1,26 @@
 :root {
+    --accentL: #ccccff;
     --accent: #c1b4f9;
+    --accent2: #927fde;
+    --accent3: #735fb0;
     --text: #f5f5f5;
+    --hbg: #576077;
     --bg: #36394c;
 }
 
 body {
     background-color: var(--bg);
+    color: var(--text);
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: color-mix(in srgb, var(--ui) 20%, transparent);
+    background-color: color-mix(in srgb, var(--hbg) 20%, transparent);
     padding: 15px 30px;
     border-radius: 5px;
-    border: 2px solid color-mix(in srgb, var(--accent) 40%, transparent);
+    border: 2px solid color-mix(in srgb, var(--accent2) 40%, transparent);
     margin-bottom: 30px;
     position: relative;
     z-index: 10; 
@@ -31,8 +36,8 @@ body {
 
 .nav-link {
     border-radius: 5px;
-    border-right:2px solid color-mix(in srgb, var(--ui) 40%, transparent);
-    background-color: color-mix(in srgb, var(--bg) 20%, transparent);
+    border-right:2px solid color-mix(in srgb, var(--accent2) 40%, transparent);
+    background-color: color-mix(in srgb, var(--hbg) 20%, transparent);
     position: fixed;
     top: 0;
     left: -400px;
