@@ -8,19 +8,21 @@
     --bg: #36394c;
 }
 
-body {
+body, html {
     background-color: var(--bg);
     color: var(--text);
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in srgb, var(--accent) 20%, transparent) color-mix(in srgb, var(--accent2) 20%, transparent);
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: color-mix(in srgb, var(--hbg) 20%, transparent);
+    background-color: color-mix(in srgb, var(--hbg) 0%, transparent);
     padding: 15px 30px;
     border-radius: 5px;
-    border: 2px solid color-mix(in srgb, var(--accent2) 40%, transparent);
+    border: 2px solid color-mix(in srgb, var(--accent2) 0%, transparent);
     margin-bottom: 30px;
     position: relative;
     z-index: 10; 
@@ -58,12 +60,21 @@ body {
     display: block;
     background: none;
     border: none;
-    font-size: 35px;
+    font-size: 22px;
     cursor: pointer;
     transition: transform 0.4s ease-out;
     z-index: 100; 
     color: var(--text);
-    }
+    background-color: color-mix(in srgb, var(--hbg) 20%, transparent);
+    border-radius: 5px;
+    border: 2px solid color-mix(in srgb, var(--accent2) 40%, transparent);
+    transform: 0.2s;
+}
+
+#nav-menu:hover {
+    color: color-mix(in srgb, var(--text) 50%, transparent);
+    transition: 0.2s;
+}
 
 .nav-link.active {
     left:0;
@@ -72,4 +83,46 @@ body {
 #logo-title {
     max-width: 160px;
     max-height: 40px;
+    background-color: color-mix(in srgb, var(--hbg) 20%, transparent);
+    border-radius: 5px;
+    border: 2px solid color-mix(in srgb, var(--accent2) 40%, transparent);
+}
+
+.title, .expl {
+    justify-self: center;
+}
+
+.logo {
+    display: flex;
+    justify-self: center;
+    max-width: 600px;
+}
+
+.catagory {
+    background-color: color-mix(in srgb, var(--hbg) 20%, transparent);
+    border-radius: 5px;
+}
+
+.nav-list {
+    background-color: color-mix(in srgb, var(--hbg) 20%, transparent);
+    border-radius: 5px;
+    border: 2px solid color-mix(in srgb, var(--accent2) 40%, transparent);
+    display: flex;
+    margin-right: auto;
+}
+
+.nav-btn {
+    background-color: color-mix(in srgb, var(--hbg) 0%, transparent);
+    border-radius: 5px;
+    border: 2px solid color-mix(in srgb, var(--accent2) 0%, transparent);
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 22px;
+    color: var(--text);
+    transition: 0.2s;
+}
+
+.nav-btn:hover {
+    color: color-mix(in srgb, var(--text) 50%, transparent);
+    transition: 0.2s;
 }
